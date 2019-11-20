@@ -3,7 +3,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Create a User', type: :feature do
-  scenario 'New users can sign up' do
+  scenario 'New users can sign up with valid name and email' do
+
     visit '/'
     click_link 'Sign Up'
     expect(page).to have_content 'Sign Up Here'
