@@ -1,1 +1,2 @@
-#What goes in here? 
+# frozen_string_literal: true
+# What goes in here?
