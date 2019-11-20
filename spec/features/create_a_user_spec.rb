@@ -15,7 +15,6 @@ RSpec.feature 'Create a User', type: :feature do
     click_button 'Sign Up'
 
     expect(page).to have_text('You have successfully signed up!')
-    
     assert user.save
   end
 end

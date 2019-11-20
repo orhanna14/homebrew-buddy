@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save
-    flash[:success] = I18n.t('signed_up') 
+    flash[:success] = I18n.t('signed_up')
     redirect_to '/'
   end
 
