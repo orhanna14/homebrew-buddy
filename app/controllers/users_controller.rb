@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Users Controller class
 class UsersController < ApplicationController
   def new
     @user = User.new
@@ -6,7 +9,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save
-    flash[:success] = 'You have successfully signed up!'
+    flash[:success] = I18n.t('signed_up')
     redirect_to '/'
   end
 
