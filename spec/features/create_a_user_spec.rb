@@ -10,6 +10,6 @@ RSpec.feature 'Create a User', type: :feature do
     fill_in 'Name', with: user.name
     fill_in 'Email', with: user.email
     click_button 'Sign Up'
-    assert user.save
+    expect(user.save).to eq true
   end
 end
