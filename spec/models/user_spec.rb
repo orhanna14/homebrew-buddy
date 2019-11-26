@@ -3,6 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it 'is valid when built with factorybot' do
+    @user1 = create(:user)
+    expect(@user1).to be_valid
+  end
+
   it 'is valid with valid attributes' do
     user = User.new(name: 'Olivia', email: 'olivia@aivilo.com',
                     password: 'password')
