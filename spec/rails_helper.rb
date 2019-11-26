@@ -12,6 +12,7 @@ end
 require 'rspec/rails'
 require 'capybara/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
+require 'spec/support/factory_bot.rb'
 
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
