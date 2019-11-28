@@ -9,6 +9,7 @@ ruby '2.6.5'
 # gem 'image_processing', '~> 1.2'
 # gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'clearance'
 gem 'jbuilder', '~> 2.7'
 gem 'pg'
 gem 'puma', '~> 4.1'
