@@ -1,15 +1,15 @@
-<h1>Sign Up Here</h1>
-<div class="row">
-<%= form_for @user do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
+<div id="clearance" class="sign-up">
+  <h2><%= t(".title") %></h2>
 
-<%= f.label :email %>
-<%= f.email_field :email %>
+  <%= form_for @user do |form| %>
+    <%= render partial: '/users/form', object: form %>
 
-<%= f.label :password %>
-<%= f.password_field :password %>
+    <div class="submit-field">
+      <%= form.submit %>
+    </div>
 
-<%= f.submit 'Sign Up', class: "btn btn-primary" %>
-<% end %>
+    <div class="other-links">
+      <%= link_to t(".sign_in"), sign_in_path %>
+    </div>
+  <% end %>
 </div>
