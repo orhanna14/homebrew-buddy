@@ -30,5 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world" 
-  signed_up: 'You have successfully signed up!'
+  layouts:
+    application:
+      signed_up: 'You have successfully signed up!'
+      new_recipe: 'Create a New Recipe'
+      success: 'Your recipe saved successfully!'
+      alert: 'Please fix the errors and try again'

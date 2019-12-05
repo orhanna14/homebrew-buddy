@@ -16,8 +16,12 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = User.find(params[:user_id])
-    @recipe.save
-    redirect_to '/'
+    if @recipe.save
+      flash[:success] = t('success')
+      redirect_to '/'
+    else
+      flash[:alert] = t('alert')
+    end
   end
 
   private

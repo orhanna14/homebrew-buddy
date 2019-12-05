@@ -6,15 +6,16 @@
 </head>
 <body>
   <div id="header">
-    <% if signed_in? -%>
+    <% if signed_in? %>
+      <%= link_to t(".new_recipe"), new_user_recipe_path(current_user) %>
       <%= button_to t(".sign_out"), sign_out_path, method: :delete %>
-    <% else -%>
+    <% else %>
       <%= link_to t(".sign_in"), sign_in_path %>
-    <% end -%>
+    <% end %>
   </div>
 
   <div id="flash">
-    <% flash.each do |key, value| -%>
+    <% flash.each do |key, value| %>
       <div id="flash_<%= key %>"><%=h value %></div>
     <% end %>
   </div>
