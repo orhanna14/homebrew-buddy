@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
-
   config.cache_classes = false
 
   config.eager_load = false
@@ -27,5 +26,4 @@ Rails.application.configure do
 
   config.active_support.deprecation = :stderr
   config.middleware.use Clearance::BackDoor
-
 end

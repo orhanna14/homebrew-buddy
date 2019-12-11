@@ -2,5 +2,7 @@
 
 Rails.application.routes.draw do
   root 'home#index'
-  resources :users, only: %i[new create]
+  resources :users do
+    resources :recipes, only: %i[new create]
+  end
 end

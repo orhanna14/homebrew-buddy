@@ -1,0 +1,14 @@
+<h1>I'm here to create a new recipe</h1>
+
+<%= form_with model: [@user, @recipe] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients %>
+
+  <%= f.label :instructions %>
+  <%= f.text_field :instructions %>
+
+  <%= f.submit %>
+<% end %>
