@@ -7,7 +7,7 @@ Rails.application.configure do
 
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
-    'Cache-Control' => "public, max-age=#{1.hour.to_i}"
+    "Cache-Control" => "public, max-age=#{1.hour.to_i}",
   }
 
   config.consider_all_requests_local = true
@@ -19,7 +19,7 @@ Rails.application.configure do
   config.action_controller.allow_forgery_protection = false
 
   config.active_storage.service = :test
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :test
