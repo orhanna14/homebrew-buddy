@@ -3,8 +3,8 @@
 FactoryBot.define do
   factory :recipe do
     user
-    title { 'MyString' }
-    ingredients { 'MyText' }
-    instructions { 'MyText' }
+    title { "MyString" }
+    ingredients { "MyText" }
+    instructions { "MyText" }
   end
 end

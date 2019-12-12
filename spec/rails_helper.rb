@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-ENV['RAILS_ENV'] ||= 'test'
+require "spec_helper"
+ENV["RAILS_ENV"] ||= "test"
 
-require File.expand_path('../config/environment', __dir__)
+require File.expand_path("../config/environment", __dir__)
 
 # Prevent database truncation if the environment is production
 if Rails.env.production?
-  abort('The Rails environment is running in production mode!')
+  abort("The Rails environment is running in production mode!")
 end
-require 'rspec/rails'
-require 'capybara/rspec'
-require 'support/factory_bot.rb'
+require "rspec/rails"
+require "capybara/rspec"
+require "support/factory_bot.rb"
 
 Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
