@@ -1,0 +1,9 @@
+<h1>Showing Recipe for <%= @recipe.title %></h1>
+
+<div>
+  <ul>
+    <li><%= @recipe.ingredients %></li>
+    <li><%= @recipe.instructions %></li>
+  </ul>
+  <%= button_to t('.add_picture'), recipe_pictures_path(@recipe) %>
+</div>

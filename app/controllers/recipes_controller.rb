@@ -13,14 +13,19 @@ class RecipesController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def show
+    @user = User.find(params[:user_id])
+    @recipe = @user.recipes.find(params[:id])
+  end
+
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = User.find(params[:user_id])
     if @recipe.save
-      flash[:success] = t("success")
-      redirect_to "/"
+      flash[:success] = I18n.t('.success')
+      redirect_to '/'
     else
-      flash[:alert] = t("alert")
+      flash[:alert] = I18n.t('.alert')
     end
   end
 

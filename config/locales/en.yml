@@ -34,5 +34,12 @@ en:
     application:
       signed_up: 'You have successfully signed up!'
       new_recipe: 'Create a New Recipe'
+      view_recipes: 'View all Recipes'
+  recipes:
+    index:
+      show_recipe: 'Show recipe'
+    create:
       success: 'Your recipe saved successfully!'
       alert: 'Please fix the errors and try again'
+    show:
+      add_picture: 'Add a picture'
