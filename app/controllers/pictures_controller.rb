@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class PicturesController < ApplicationController
-  def create
-
-  end
+<<<<<< updates-n-poly
+ def create end
 end
