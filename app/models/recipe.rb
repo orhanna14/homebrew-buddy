@@ -6,5 +6,5 @@ class Recipe < ApplicationRecord
   validates_presence_of :instructions
 
   belongs_to :user
-  has_many :pictures, as: :imageable
+  has_many_attached :pictures
 end

@@ -22,10 +22,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user = User.find(params[:user_id])
     if @recipe.save
-      flash[:success] = I18n.t('.success')
+      flash[:success] = I18n.t('recipes.create.success')
       redirect_to '/'
     else
-      flash[:alert] = I18n.t('.alert')
+      flash[:alert] = I18n.t('recipes.create.alert')
     end
   end
 
