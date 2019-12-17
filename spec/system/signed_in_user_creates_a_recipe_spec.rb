@@ -21,7 +21,7 @@ RSpec.feature 'A signed in user creates a recipe' do
 
   scenario 'and includes a picture' do
     user = create(:user)
-    recipe = FactoryBot.build(:recipe)
+    recipe = FactoryBot.attributes_for(:recipe)
 
     sign_in_with user.email, user.password
     visit '/'

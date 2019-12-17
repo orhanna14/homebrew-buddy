@@ -27,7 +27,7 @@ RSpec.feature 'Visitor signs up' do
     visit sign_up_path
     click_button I18n.t('helpers.submit.user.create')
 
-    expect(user.picture.present?).to eq(true)
+    expect(user.picture).to be_present
   end
 
   scenario 'tries with invalid email' do

@@ -4,7 +4,6 @@
   <ul>
     <li><%= @recipe.ingredients %></li>
     <li><%= @recipe.instructions %></li>
-    pictures:
     <% if @recipe.pictures.attached? %>
       <li>
         <p>
@@ -15,6 +14,6 @@
       <% end %>
       </li>
         </p>
+      <% end %>
   </ul>
-<% end %>
 </div>
