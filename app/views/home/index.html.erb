@@ -1,1 +1,9 @@
-<h1>Hello World!</h1>
+<h1>Hello <%= @user.name %></h1>
+<% if @user.picture.attached? %>
+  <p>
+  <strong>Picture:</strong>
+  <br>
+  <%= image_tag @user.picture %>
+  </p>
+<% end %>
+<%= @user.email %>
