@@ -1,0 +1,27 @@
+example_id                                                      | status | run_time        |
+--------------------------------------------------------------- | ------ | --------------- |
+./spec/features/clearance/user_signs_out_spec.rb[1:1]           | passed | 0.06446 seconds |
+./spec/features/clearance/visitor_resets_password_spec.rb[1:1]  | passed | 0.02024 seconds |
+./spec/features/clearance/visitor_resets_password_spec.rb[1:2]  | passed | 0.05364 seconds |
+./spec/features/clearance/visitor_resets_password_spec.rb[1:3]  | passed | 0.02057 seconds |
+./spec/features/clearance/visitor_signs_in_spec.rb[1:1]         | passed | 0.05115 seconds |
+./spec/features/clearance/visitor_signs_in_spec.rb[1:2]         | passed | 0.05018 seconds |
+./spec/features/clearance/visitor_signs_in_spec.rb[1:3]         | passed | 0.03181 seconds |
+./spec/features/clearance/visitor_signs_in_spec.rb[1:4]         | passed | 0.02433 seconds |
+./spec/features/clearance/visitor_signs_up_spec.rb[1:1]         | passed | 0.02438 seconds |
+./spec/features/clearance/visitor_signs_up_spec.rb[1:2]         | passed | 0.06654 seconds |
+./spec/features/clearance/visitor_signs_up_spec.rb[1:3]         | passed | 0.03247 seconds |
+./spec/features/clearance/visitor_signs_up_spec.rb[1:4]         | passed | 0.05418 seconds |
+./spec/features/clearance/visitor_signs_up_spec.rb[1:5]         | passed | 0.02918 seconds |
+./spec/features/clearance/visitor_updates_password_spec.rb[1:1] | passed | 0.07877 seconds |
+./spec/features/clearance/visitor_updates_password_spec.rb[1:2] | passed | 0.12107 seconds |
+./spec/features/clearance/visitor_updates_password_spec.rb[1:3] | passed | 0.07312 seconds |
+./spec/models/recipe_spec.rb[1:1]                               | passed | 0.00294 seconds |
+./spec/models/recipe_spec.rb[1:2:1]                             | passed | 0.00513 seconds |
+./spec/models/recipe_spec.rb[1:2:2]                             | passed | 0.00325 seconds |
+./spec/models/recipe_spec.rb[1:2:3]                             | passed | 0.00337 seconds |
+./spec/models/user_spec.rb[1:1:1]                               | passed | 0.00831 seconds |
+./spec/models/user_spec.rb[1:1:2]                               | passed | 0.00878 seconds |
+./spec/models/user_spec.rb[1:1:3]                               | passed | 0.00558 seconds |
+./spec/system/signed_in_user_creates_a_recipe_spec.rb[1:1]      | passed | 0.21486 seconds |
+./spec/system/signed_in_user_creates_a_recipe_spec.rb[1:2]      | passed | 0.1157 seconds  |
