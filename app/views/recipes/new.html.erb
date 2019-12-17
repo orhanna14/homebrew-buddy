@@ -10,5 +10,8 @@
   <%= f.label :instructions %>
   <%= f.text_field :instructions %>
 
+  <%= f.label :pictures %>
+  <%= f.file_field :pictures, multiple: true %>
+
   <%= f.submit %>
 <% end %>

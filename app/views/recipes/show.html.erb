@@ -4,6 +4,17 @@
   <ul>
     <li><%= @recipe.ingredients %></li>
     <li><%= @recipe.instructions %></li>
+    pictures:
+    <% if @recipe.pictures.attached? %>
+      <li>
+        <p>
+        <strong>Pictures:</strong>
+        <br>
+        <%= @recipe.pictures.each do |picture| %>
+          <%= image_tag picture %>
+      <% end %>
+      </li>
+        </p>
   </ul>
-  <%= button_to t('.add_picture'), recipe_pictures_path(@recipe) %>
+<% end %>
 </div>
