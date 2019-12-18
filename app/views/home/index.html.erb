@@ -2,7 +2,6 @@
 <% if @user.picture.attached? %>
   <dl>
   <dt>Picture:</dt>
-  <br>
-  <%= image_tag @user.picture.variant(resize: "500x500") %>
+  <dd><%= image_tag @user.picture.variant(resize: "500x500") %></dd>
   </dl>
 <% end %>
