@@ -1,9 +1,8 @@
 <h1>Hello <%= @user.name %></h1>
 <% if @user.picture.attached? %>
-  <p>
-  <strong>Picture:</strong>
+  <dl>
+  <dt>Picture:</dt>
   <br>
-  <%= image_tag @user.picture %>
-  </p>
+  <%= image_tag @user.picture.variant(resize: "500x500") %>
+  </dl>
 <% end %>
-<%= @user.email %>

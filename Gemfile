@@ -6,11 +6,12 @@ git_source(:github) { |_repo| "https://github.com/#{repo}.git" }
 ruby "2.6.5"
 
 # gem 'bcrypt', '~> 3.1.7'
-# gem 'image_processing', '~> 1.2'
 # gem 'redis', '~> 4.0'
 gem "bootsnap", ">= 1.4.2", require: false
 gem "clearance"
+gem "image_processing", "~> 1.2"
 gem "jbuilder", "~> 2.7"
+gem "mini_magick"
 gem "pg"
 gem "puma", "~> 4.3"
 gem "rails", "~> 6.0.1"
