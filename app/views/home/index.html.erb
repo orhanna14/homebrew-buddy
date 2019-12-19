@@ -1,7 +1,10 @@
-<h1>Hello <%= @user.name %></h1>
+<%if @user %>
+  <h1>Hello <%= @user.name %></h1>
+
 <% if @user.picture.attached? %>
   <dl>
   <dt>Picture:</dt>
   <dd><%= image_tag @user.picture.variant(resize: "500x500") %></dd>
   </dl>
+<% end %>
 <% end %>

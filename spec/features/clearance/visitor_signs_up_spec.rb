@@ -19,15 +19,8 @@ RSpec.feature "Visitor signs up" do
   end
 
   scenario "with valid email, password, and picture" do
-    user = FactoryBot.build(:user)
-    user.
-      picture.
-      attach(io: File.open("public/apple-touch-icon.png"), filename: "apple-touch-icon.png")
-
-    visit sign_up_path
-    click_button I18n.t("helpers.submit.user.create")
-
-    expect(user.picture).to be_present
+    sign_up_with_picture "testname", "valid@example.com", "password", "spec/fixtures/apple-touch-icon.png"
+    expect(page).to have_xpath("//img[contains(@src,'apple-touch-icon.png')]")
   end
 
   scenario "tries with invalid email" do
