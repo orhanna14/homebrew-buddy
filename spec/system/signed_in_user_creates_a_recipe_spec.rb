@@ -30,11 +30,10 @@ RSpec.feature "A signed in user creates a recipe" do
     fill_in "Ingredients", with: recipe.ingredients
     fill_in "Instruction", with: recipe.instructions
 
-    recipe.
-      pictures.
-      attach(io: File.open("public/apple-touch-icon.png"), filename: "apple-touch-icon.png")
+    attach_file("recipe[pictures][]", "spec/fixtures/apple-touch-icon.png")
     click_button "Create Recipe"
-
-    expect(recipe.pictures.present?).to eq(true)
+    click_link "View all Recipes"
+    click_link "Show recipe"
+    expect(page).to have_xpath("//img[contains(@src,'apple-touch-icon.png')]")
   end
 end
