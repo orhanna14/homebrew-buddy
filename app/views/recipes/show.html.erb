@@ -1,19 +1,17 @@
 <h1>Showing Recipe for <%= @recipe.title %></h1>
 
-<div>
-  <ul>
-    <li><%= @recipe.ingredients %></li>
-    <li><%= @recipe.instructions %></li>
+  <dl>
+    <dt>Ingredients: </dt>
+    <dd><%= @recipe.ingredients %></dd>
+
+    <dt>Instructions: </dt>
+    <dd><%= @recipe.instructions %></dd>
+
     <% if @recipe.pictures.attached? %>
-      <li>
-        <p>
-        <strong>Pictures:</strong>
-        <br>
-        <%= @recipe.pictures.each do |picture| %>
+        <dt>Pictures:</dt>
+        <dd><%= @recipe.pictures.each do |picture| %>
           <%= image_tag picture.variant(resize: "500x500") %>
+        </dd>
       <% end %>
-      </li>
-        </p>
       <% end %>
-  </ul>
-</div>
+  </dl>
