@@ -19,7 +19,10 @@ RSpec.feature "Visitor signs up" do
   end
 
   scenario "with valid email, password, and picture" do
-    sign_up_with_picture "testname", "valid@example.com", "password", "spec/fixtures/apple-touch-icon.png"
+    sign_up_with_picture "testname",
+                         "valid@example.com",
+                         "password",
+                         "spec/fixtures/apple-touch-icon.png"
     expect(page).to have_xpath("//img[contains(@src,'apple-touch-icon.png')]")
   end
 

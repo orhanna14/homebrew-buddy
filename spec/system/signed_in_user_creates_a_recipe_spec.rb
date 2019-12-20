@@ -4,7 +4,7 @@ require "rails_helper"
 require "support/features/clearance_helpers"
 
 RSpec.feature "A signed in user creates a recipe" do
-  scenario "with valid parameters, but no picture" do
+  scenario "with valid parameters" do
     user = create(:user)
     recipe = FactoryBot.build(:recipe)
 
@@ -19,7 +19,7 @@ RSpec.feature "A signed in user creates a recipe" do
     expect(page).to have_current_path("/")
   end
 
-  scenario "and includes a picture" do
+  scenario "and includes an optional picture" do
     user = create(:user)
     recipe = FactoryBot.build(:recipe)
 
