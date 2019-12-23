@@ -1,14 +1,22 @@
 # frozen_string_literal: true
 
 require "rails_helper"
+require "spec_helper"
 
-RSpec.feature "A potential user searches breweries" do
-  scenario "with valid parameters" do
+RSpec.feature "A potential user sends an external request to search breweries" do
+  scenario "with valid parameters in the OpenBrewery DB Search feature" do
     visit "/"
-    fill_in "Brewery", with: "Anchor"
-    click_button "Search"
+    fill_in "brewery", with: "Anchor"
+    click_on "Search"
 
-    # TODO: Stub requests and write expectation here.
+    name = find("name")
+    expect(name).to have_content("Anchor Brewing Co")
+    uri = ("https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search")
+
+    connection = Excon.new(uri)
+    get_response = connection.get
+
+    expect(get_response.data).to be_an_instance_of(Hash)
 
   end
 end

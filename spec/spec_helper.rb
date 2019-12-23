@@ -22,6 +22,15 @@ RSpec.configure do |config|
           "User-Agent" => "Ruby",
         }).
         to_return(status: 200, body: "", headers: {})
+      
+        stub_request(:get, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
+          with(
+            headers: {
+              'Accept'=>'*/*',
+              'Host'=>'brianiswu-open-brewery-db-v1.p.rapidapi.com:443',
+              'User-Agent'=>'excon/0.71.1'
+            }).
+            to_return(status: 200, body: "", headers: {})
   end
 
   # The settings below are suggested to provide a good initial experience
