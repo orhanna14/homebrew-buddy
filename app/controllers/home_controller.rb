@@ -22,9 +22,8 @@ class HomeController < ApplicationController
     response = Excon.get(
       url,
       headers: {
-        "X-RapidAPI-Host" => "brianiswu-open-brewery-db-v1.p.rapidapi.com",
-        "X-RapidAPI-Key" => "d06411ee49mshcbcdc80cdd60989p1f0313jsn80c1ad5cec44",
-      # TODO: This key lives in credentials file. Refer to it from there.
+        "X-RapidAPI-Host" => Rails.application.credentials.x_rapid_api[:host],
+        "X-RapidAPI-Key" => Rails.application.credentials.x_rapid_api[:key] ,
       }
    )
 
