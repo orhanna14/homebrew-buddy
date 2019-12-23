@@ -34,3 +34,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+spec/examples.txt
+
+/config/credentials.yml.enc
+/config/credentials/test.yml.enc
+/config/credentials/test.key
