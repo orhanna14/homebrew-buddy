@@ -15,7 +15,7 @@ RSpec.feature "A potential user sends an external request to search breweries" d
 
     connection = Excon.new(uri)
     get_response = connection.get
-
+    # TODO: So the response I need to stub right? This is a fixture?
     expect(get_response.data).to be_an_instance_of(Hash)
 
   end
