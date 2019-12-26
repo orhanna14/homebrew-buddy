@@ -15,24 +15,15 @@ RSpec.configure do |config|
   WebMock.disable_net_connect!(allow_localhost: true)
 
   config.before(:each) do
-    stub_request(:get, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
+    stub_request(:any, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
       with(
         headers: {
           "Accept" => "*/*",
           "User-Agent" => "Ruby",
         }).
         to_return(status: 200, body: "", headers: {})
-      
-        stub_request(:get, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
-          with(
-            headers: {
-              'Accept'=>'*/*',
-              'Host'=>'brianiswu-open-brewery-db-v1.p.rapidapi.com:443',
-              'User-Agent'=>'excon/0.71.1'
-            }).
-            to_return(status: 200, body: "", headers: {})
-  end
 
+  end
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
   # This allows you to limit a spec run to individual examples or groups
