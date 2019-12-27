@@ -1,7 +1,9 @@
 AllCops:
   Exclude:
     - db/schema.rb
-
+    - node_modules/node-sass/src/libsass/contrib/libsass.spec
+    - config/environments/production.rb
+    - bin/bundle
 require:
   - rubocop-rails
   - rubocop-performance

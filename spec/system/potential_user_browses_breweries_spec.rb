@@ -2,13 +2,7 @@
 
 require "rails_helper"
 
-RSpec.feature "A potential user searches breweries" do
-  scenario "with valid parameters" do
-    visit "/"
-    fill_in "Brewery", with: "Anchor"
-    click_button "Search"
-
-    # TODO: Stub requests and write expectation here.
-
+RSpec.feature "A potential user sends an external request to search breweries" do
+  scenario "with valid parameters in the OpenBrewery DB Search feature" do
   end
 end
