@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def search
     breweries =
-      BreweryClient.new(params[:brewery]).find_brewery(params[:brewery])
+      BrewerySearch.new(params[:brewery]).find_brewery(params[:brewery])
     unless breweries
       flash[:alert] = "Brewery not found"
       # TODO: Move this alert to I18n.
