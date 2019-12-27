@@ -5,10 +5,10 @@ require "rails_helper"
 RSpec.feature "A potential user sends an external request to search breweries" do
   scenario "with valid parameters in the OpenBrewery DB Search feature" do
     brewery_name = "Anchor"
-    search_service = double("BreweryClient")
+    search_service = double("BrewerySearch")
     allow(search_service).to receive(:find_brewery).
       and_return(JSON.parse(fake_json_response))
-    allow(BreweryClient).to receive(:new).and_return(search_service)
+    allow(BrewerySearch).to receive(:new).and_return(search_service)
 
     visit "/"
     fill_in "brewery", with: brewery_name
