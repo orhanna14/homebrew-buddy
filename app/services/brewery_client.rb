@@ -1,4 +1,8 @@
 class BreweryClient
+  def self.find_brewery(name)
+    new(name).find_brewery(name)
+  end
+  # TODO: Ask Todd why I need this method above
   def initialize(name)
     @name = name
   end
@@ -14,7 +18,7 @@ class BreweryClient
 
   return nil if response.status != 200
 
-  JSON.parse(response.body)
+  JSON.parse(response.body.to_json)
   end
 
   def find_brewery(name)

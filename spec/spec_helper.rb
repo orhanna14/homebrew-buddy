@@ -15,7 +15,7 @@ RSpec.configure do |config|
   WebMock.disable_net_connect!(allow_localhost: true)
 
   config.before(:each) do
-    stub_request(:get, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
+    stub_request(:any, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
       with(
         headers: {
           "Accept" => "*/*",
