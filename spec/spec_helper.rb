@@ -20,8 +20,9 @@ RSpec.configure do |config|
         headers: {
           "Accept" => "*/*",
           "User-Agent" => "Ruby",
-        }).
-        to_return(status: 200, body: "", headers: {})
+        },
+      ).
+      to_return(status: 200, body: "", headers: {})
   end
 
   # The settings below are suggested to provide a good initial experience
