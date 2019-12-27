@@ -14,7 +14,7 @@ jscs:
   config_file: style/javascript/.jscsrc
 rubocop:
   enabled: true
-  config_file: style/ruby/.rubocop.yml
+  config_file: .rubocop.yml
   version: 0.72.0
 scss:
   enabled: false
