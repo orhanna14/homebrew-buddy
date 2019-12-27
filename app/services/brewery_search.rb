@@ -1,9 +1,8 @@
-class BreweryClient
+class BrewerySearch
   def self.find_brewery(name)
     new(name).find_brewery(name)
   end
 
-  # TODO: Ask Todd why I need this method above
   def initialize(name)
     @name = name
   end
