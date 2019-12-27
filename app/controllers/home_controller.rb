@@ -4,7 +4,8 @@ class HomeController < ApplicationController
   def index; end
 
   def search
-    breweries = BreweryClient.new(params[:brewery]).find_brewery(params[:brewery])
+    breweries =
+      BreweryClient.new(params[:brewery]).find_brewery(params[:brewery])
 
     unless breweries
       flash[:alert] = "Brewery not found"

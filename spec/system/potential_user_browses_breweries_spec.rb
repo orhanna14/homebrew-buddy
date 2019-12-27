@@ -10,7 +10,8 @@ RSpec.feature "A potential user sends an external request to search breweries" d
 
     visit "/"
     fill_in "brewery", with: brewery_name
-    stub_request(:get, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
+    stub_request(:get,
+                 "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
       with(
         headers: {
           "Accept" => "*/*",
