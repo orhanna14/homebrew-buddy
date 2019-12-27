@@ -33,5 +33,4 @@ RSpec.describe BrewerySearch do
     \"website_url\":\"http://www.anchorbrewing.com\",
     \"updated_at\":\"2018-08-23T23:24:25.576Z\",\"tag_list\":[]}]"
   end
-
 end
