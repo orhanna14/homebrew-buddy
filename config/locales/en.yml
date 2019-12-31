@@ -35,10 +35,9 @@ en:
       signed_up: 'You have successfully signed up!'
       new_recipe: 'Create a New Recipe'
       view_recipes: 'View all Recipes'
-  controllers:
-    home:
-      search:
-        not_found: 'Brewery not found'
+  home:
+    search:
+      not_found: 'Brewery not found'
   recipes:
     index:
       show_recipe: 'Show recipe'

@@ -31,6 +31,6 @@ RSpec.describe BrewerySearch do
     \"country\":\"United States\",\"longitude\":\"-122.4011065\",
     \"latitude\":\"37.7630772\",\"phone\":\"4158638350\",
     \"website_url\":\"http://www.anchorbrewing.com\",
-    \"updated_at\":\"2018-08-23T23:24:25.576Z\",\"tag_list\":[]}]"
+    \"updated_at\":\"2018-08-23T23:24:25.576Z\",\"tag_list\":[]}]".to_json
   end
 end

@@ -18,7 +18,7 @@ class BrewerySearch
 
     return nil if response.status != 200
 
-    JSON.parse(response.body.to_json)
+    JSON.parse(response.body)
   end
 
   def find_brewery(name)
