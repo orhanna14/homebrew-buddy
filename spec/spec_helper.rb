@@ -11,6 +11,20 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
+  require "webmock/rspec"
+  WebMock.disable_net_connect!(allow_localhost: true)
+
+  config.before(:each) do
+    stub_request(:any, "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search").
+      with(
+        headers: {
+          "Accept" => "*/*",
+          "User-Agent" => "Ruby",
+        },
+      ).
+      to_return(status: 200, body: "", headers: {})
+  end
+
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
   # This allows you to limit a spec run to individual examples or groups
