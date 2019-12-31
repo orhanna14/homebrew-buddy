@@ -3,15 +3,13 @@
 class HomeController < ApplicationController
   def index; end
 
-  def search
+  def create
     breweries =
-      BrewerySearch.new(params[:brewery]).find_brewery(params[:brewery])
-    unless breweries
-      flash[:alert] = t(".not_found")
-      return render action: :index
+      BrewerySearch.new(params[:brewery]).find_brewery
+    if breweries != []
+      @brewery = breweries.first
+    else
+      redirect_to "/", alert: t(".not_found")
     end
-
-    @brewery = breweries.first
-
   end
 end
