@@ -7,6 +7,7 @@ ruby "2.6.5"
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'redis', '~> 4.0'
+gem "active_storage_validations"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "clearance"
 gem "image_processing", "~> 1.2"
