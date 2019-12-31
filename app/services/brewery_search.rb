@@ -1,7 +1,5 @@
-class BrewerySearch
-  def self.find_brewery(name)
-    new(name).find_brewery(name)
-  end
+class BrewerySearch < ApplicationService
+  attr_reader :name
 
   def initialize(name)
     @name = name
@@ -21,7 +19,7 @@ class BrewerySearch
     JSON.parse(response.body)
   end
 
-  def find_brewery(name)
+  def find_brewery
     request_api(
       "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search?query=#{name}",
     )
