@@ -36,7 +36,7 @@ en:
       new_recipe: 'Create a New Recipe'
       view_recipes: 'View all Recipes'
   home:
-    search:
+    create:
       not_found: 'Brewery not found'
   recipes:
     index:
