@@ -1,8 +1,17 @@
 # frozen_string_literal: true
 
-# Home controller class
 class HomeController < ApplicationController
   def index
     @user = current_user
+  end
+
+  def create
+    breweries =
+      BrewerySearch.new(params[:brewery]).find_brewery
+    if breweries != []
+      @brewery = breweries.first
+    else
+      redirect_to "/", alert: t(".not_found")
+    end
   end
 end

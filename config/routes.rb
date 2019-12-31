@@ -2,6 +2,9 @@
 
 Rails.application.routes.draw do
   root "home#index"
+
+  get "/search" => "home#create", as: "search"
+
   resources :users, only: %i[new create] do
     resources :recipes, only: %i[new create index show]
   end

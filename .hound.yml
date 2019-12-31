@@ -2,16 +2,16 @@ coffeescript:
   enabled: false
 eslint:
   enabled: true
-  config_file: style/javascript/.eslintrc.json
+  #  config_file: style/javascript/.eslintrc.json
   version: 6.3.0
 haml:
   enabled: true
-  config_file: style/haml/haml.yml
+  # config_file: style/haml/haml.yml
 javascript:
   enabled: false
 jscs:
   enabled: true
-  config_file: style/javascript/.jscsrc
+  # config_file: style/javascript/.jscsrc
 rubocop:
   enabled: true
   config_file: .rubocop.yml
@@ -20,4 +20,4 @@ scss:
   enabled: false
 stylelint:
   enabled: true
-  config_file: style/sass/.stylelintrc.json
+  # config_file: style/sass/.stylelintrc.json

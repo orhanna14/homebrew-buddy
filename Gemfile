@@ -9,9 +9,12 @@ ruby "2.6.5"
 # gem 'redis', '~> 4.0'
 gem "active_storage_validations"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "bootstrap", "~> 4.4.1"
 gem "clearance"
+gem "excon"
 gem "image_processing", "~> 1.2"
 gem "jbuilder", "~> 2.7"
+gem "jquery-rails"
 gem "mini_magick"
 gem "pg"
 gem "puma", "~> 4.3"
@@ -25,7 +28,9 @@ group :development, :test do
   gem "database_cleaner"
   gem "factory_bot_rails"
   gem "rspec-rails"
+  gem "rubocop-performance"
   gem "rubocop-rails"
+  gem "webmock"
 end
 
 group :development do
