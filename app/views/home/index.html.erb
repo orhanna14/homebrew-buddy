@@ -27,3 +27,26 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class = "col-lg-12 mt-5">
+      <h1> Browse recipes </h1>
+      <ul>
+        <% @recipes.each do |recipe| %>
+          <%= recipe.id %>
+          <div class = "row">
+            <div class="col-md-2">
+              <h5>User: <%= recipe.user.name %></h5>
+            </div>
+
+            <div class = "col-lg-6 well">
+              <h4><%= recipe.title %></h4>
+              <h5><%= recipe.ingredients %></h5>
+              <h5><%= recipe.instructions %><h5>
+            </div>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
