@@ -3,7 +3,7 @@
 class HomeController < ApplicationController
   def index
     @user = current_user
-    @recipes = Recipe.all.order("created_at DESC")
+    @recipes = Recipe.all.order(created_at: :desc)
     @recipes = Recipe.paginate(page: params[:page], per_page: 10)
   end
 

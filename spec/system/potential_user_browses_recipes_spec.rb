@@ -9,10 +9,8 @@ RSpec.feature "A potential user browses recipes created by others" do
 
     visit root_path
 
-    expect(page).to have_content(recipes[0].id)
-    expect(page).to have_content(recipes[1].id)
-    expect(page).to have_content(recipes[2].id)
-    expect(page).to have_content(recipes[3].id)
-    expect(page).to have_content(recipes[4].id)
+    recipes.each do |recipe|
+      expect(page).to have_content(recipe.title)
+    end
   end
 end
