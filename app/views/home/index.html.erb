@@ -32,6 +32,7 @@
     <div class = "col-lg-12 mt-5">
       <h1> Browse recipes </h1>
       <ul>
+        <%= will_paginate @recipes %>
         <% @recipes.each do |recipe| %>
           <%= recipe.id %>
           <div class = "row">
