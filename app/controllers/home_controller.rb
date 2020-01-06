@@ -3,7 +3,7 @@
 class HomeController < ApplicationController
   def index
     @user = current_user
-    @recipes = Recipe.all
+    @recipes = Recipe.all.order("created_at DESC")
   end
 
   def create
