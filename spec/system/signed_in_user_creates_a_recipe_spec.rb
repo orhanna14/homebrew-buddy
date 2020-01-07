@@ -10,7 +10,7 @@ RSpec.feature "A signed in user creates a recipe" do
 
     sign_in_with user.email, user.password
     visit "/"
-    click_link I18n.t("layouts.application.new_recipe")
+    click_link I18n.t("layouts.navigation.new_recipe")
     fill_in "Title", with: recipe.title
     fill_in "Ingredients", with: recipe.ingredients
     fill_in "Instructions", with: recipe.instructions
@@ -25,7 +25,7 @@ RSpec.feature "A signed in user creates a recipe" do
 
     sign_in_with user.email, user.password
     visit "/"
-    click_link I18n.t("layouts.application.new_recipe")
+    click_link I18n.t("layouts.navigation.new_recipe")
     fill_in "Title", with: recipe.title
     fill_in "Ingredients", with: recipe.ingredients
     fill_in "Instruction", with: recipe.instructions
