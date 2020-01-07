@@ -1,13 +1,21 @@
-<%if @user %>
-  <h1>Hello <%= @user.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mt-5">
+      <div class="mx-auto mt-5" style="width: 400px">
+    <%if @user %>
+      <h1>Hello <%= @user.name %>!</h1>
 
-<% if @user.picture.attached? %>
-  <dl>
-  <dt>Picture:</dt>
-  <dd><%= image_tag @user.picture.variant(resize: "500x500") %></dd>
-  </dl>
-<% end %>
-<% end %>
+      <% if @user.picture.attached? %>
+        <dl>
+        <dt>Picture:</dt>
+        <dd><%= image_tag @user.picture.variant(resize: "500x500") %></dd>
+        </dl>
+      <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
