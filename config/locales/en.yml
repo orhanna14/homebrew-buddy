@@ -33,6 +33,7 @@ en:
   layouts:
     application:
       signed_up: 'You have successfully signed up!'
+    navigation:
       new_recipe: 'Create a New Recipe'
       view_recipes: 'View all Recipes'
   home:

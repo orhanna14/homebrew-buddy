@@ -7,15 +7,9 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <div id="header">
-    <% if signed_in? %>
-      <%= link_to t(".new_recipe"), new_user_recipe_path(current_user) %>
-      <%= link_to t('.view_recipes'), user_recipes_path(current_user) %>
-      <%= button_to t(".sign_out"), sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to t(".sign_in"), sign_in_path %>
-    <% end %>
-  </div>
+  <header>
+    <%= render 'layouts/navigation' %>
+  </header>
 
   <div id="flash" class="col-lg-12 mt-5">
     <% flash.each do |key, value| %>
