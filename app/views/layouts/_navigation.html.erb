@@ -5,7 +5,7 @@
       <%= link_to t(".view_recipes"), user_recipes_path(current_user), class: 'nav-link' %>
       <%= button_to t(".sign_out"), sign_out_path, method: :delete, class: 'btn btn-danger' %>
       <% else %>
-      <%= link_to t(".sign_in"), sign_in_path, 'nav-link' %>
+      <%= link_to t(".sign_in"), sign_in_path %>
       <% end %>
   </div>
 </nav>
