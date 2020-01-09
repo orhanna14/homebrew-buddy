@@ -3,6 +3,7 @@
 class Recipe < ApplicationRecord
   belongs_to :user
   has_many_attached :pictures
+  has_many :comments, through: :user
 
   validates_presence_of :title
   validates_presence_of :ingredients

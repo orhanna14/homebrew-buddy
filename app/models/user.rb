@@ -4,6 +4,7 @@
 class User < ApplicationRecord
   include Clearance::User
   has_many :recipes, dependent: :destroy
+  has_many :comments, through: :recipes
   has_one_attached :picture
 
   validates_presence_of :name
