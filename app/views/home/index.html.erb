@@ -42,7 +42,7 @@
 
             <div class = "col-lg-6 well">
               <dt>Title:</dt>
-              <dd><%= recipe.title %></dd>
+              <dd><%= link_to (recipe.title), recipe_path(recipe.id)%></dd>
               <dt>Ingredients:</dt>
               <dd><%= recipe.ingredients %></dd>
               <dt>Instructions:</dt>
