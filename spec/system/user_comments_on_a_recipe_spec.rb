@@ -20,8 +20,6 @@ RSpec.feature "A signed in user comments on a recipe" do
     fill_in "comment", with: comment.body
     click_button "Submit comment"
 
-    # reload the page
-    expect(page).to have_content(comment.body)
-
+    expect(page).to have_current_path(recipe_path(recipe))
   end
 end
