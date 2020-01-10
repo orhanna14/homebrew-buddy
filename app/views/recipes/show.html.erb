@@ -16,7 +16,7 @@
       <% end %>
   </dl>
   <div class = "container" >
-    <%= form_for :comment do |form| %>
+    <%= form_with model: [@recipe, @comment] do |form| %>
       <div class="form-group">
         <%= form.label :body %>
         <%= form.text_field :body, id: "comment" %>

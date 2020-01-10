@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     resources :recipes, only: %i[new create index]
   end
 
-  resources :recipes, only: %i[show]
+  resources :recipes, only: %i[show update] do
+    resources :comments, only: %i[create]
+  end
 end
