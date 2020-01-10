@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  attr_accessor :recipe_id
+  before_action :require_login
 
   def create
-    @comment = Comment.create(comment_params)
-    @user = current_user
-    @comment.recipe = Recipe.find(params[:recipe_id])
-    @comment.set_user!(current_user)
+    @comment = Comment.create(body: params[:body], user_id: current_user.id, recipe_id: params[:recipe_id] )
     if @comment.save
       flash[:success] = "Success!"
       # TODO: Move this to I18n
