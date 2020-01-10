@@ -26,3 +26,14 @@
       </div>
     <% end %>
   </div>
+
+  <div class = "container" id = "comments">
+    <% if @recipe.comments.any? %>
+      <dt>Comments:</dt>
+      <% @recipe.comments.each do |comment| %>
+        <dd><%= comment.body %></dd>
+        <dt>Posted at:</dt>
+        <dd><%= comment.created_at %></dd>
+      <% end %>
+      <% end %>
+  </div>
