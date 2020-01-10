@@ -9,7 +9,7 @@
 
     <div class="col-lg-6 well">
       <h4><%= recipe.title %></h4>
-      <h4><%= link_to t('.show_recipe'), user_recipe_path(current_user, recipe.id)%></h4>
+      <h4><%= link_to t('.show_recipe'), user_recipes_path(current_user, recipe.id)%></h4>
     </div>
   </div>
 <% end %>
