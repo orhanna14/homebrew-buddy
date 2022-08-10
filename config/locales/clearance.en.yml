@@ -37,7 +37,7 @@ en:
       user:
         create: Sign up
   layouts:
-    application:
+    navigation:
       sign_in: Sign in
       sign_out: Sign out
   passwords:
